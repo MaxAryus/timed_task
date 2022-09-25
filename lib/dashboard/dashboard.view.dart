@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:timed_tasks/shared/widget/ContainerCard.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({Key? key}) : super(key: key);
@@ -10,8 +11,6 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         middle: Text("Dashboard"),
@@ -23,17 +22,8 @@ class _DashboardState extends State<Dashboard> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Container(
-                  width: width,
-                  height: 50,
-                  child: Padding(
-                    padding: EdgeInsets.all(8),
-                    child: Text("10 von 20 Aufgaben erledigt"),
-                  ),
-                  decoration: BoxDecoration(
-                    color: CupertinoColors.white,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
+                ContainerCard(
+                  child: Text('asdf'),
                 ),
               ],
             ),

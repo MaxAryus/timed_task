@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -68,7 +68,6 @@
 				3D5FA4144DCE2BE6F69410B1 /* Pods-Runner.release.xcconfig */,
 				5D23A5C46656601F9C70D7CF /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,7 +84,6 @@
 			children = (
 				3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */,
 				9740EEB21CF90195004384FC /* Debug.xcconfig */,
-				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
 				9740EEB31CF90195004384FC /* Generated.xcconfig */,
 			);
 			name = Flutter;
@@ -96,6 +94,7 @@
 			children = (
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
+				7AFA3C8E1D35360C0083082E /* Release.xcconfig */,
 				97C146EF1CF9000F007C117D /* Products */,
 				4349968981ABB1A3B7659731 /* Pods */,
 				7DE873298ABD726E48DB9114 /* Frameworks */,
