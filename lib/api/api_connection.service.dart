@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:supabase/supabase.dart';
 
-class SupabaseConnectionApi {
+class ApiConnectionService {
   final String _base_dev_url = 'http://localhost:54321';
   final String _base_dev_key =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24ifQ.625_WdcF3KHqz5amU0x2X5WWHP-OEs_4qj0ssLNHzTs';

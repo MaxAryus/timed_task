@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:timed_tasks/dashboard/dashboard.view.dart';
+import 'package:timed_tasks/profile/profile.view.dart';
 import 'package:timed_tasks/todo-overview/todo-overview.view.dart';
 
 class AppNavigation extends StatefulWidget {
@@ -11,7 +12,11 @@ class AppNavigation extends StatefulWidget {
 }
 
 class _AppNavigationState extends State<AppNavigation> {
-  List<Widget> tabs = [Dashboard(), ToDoOverview()];
+  List<Widget> tabs = [
+    Dashboard(),
+    ToDoOverview(),
+    Profile(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +31,16 @@ class _AppNavigationState extends State<AppNavigation> {
           currentIndex: widget.index,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.home),
+              icon: Icon(CupertinoIcons.home, size: 24),
               label: "Dashboard",
             ),
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.list_bullet),
-              label: "ToDo Überischt",
+              icon: Icon(CupertinoIcons.list_bullet, size: 24),
+              label: "Aufgaben",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.person, size: 24),
+              label: "Profil",
             )
           ],
         ),

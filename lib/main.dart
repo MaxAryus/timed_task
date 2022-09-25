@@ -1,10 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:supabase/supabase.dart';
+import 'package:timed_tasks/api/api_connection.service.dart';
 import 'package:timed_tasks/routes.dart';
-import 'package:timed_tasks/shared/api/supabase-connection.api.dart';
+import 'package:timed_tasks/shared/log/logger.dart';
+import 'package:timed_tasks/shared/shared-prefrences/shared-pref.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +13,14 @@ void main() async {
     DeviceOrientation.portraitUp,
   ]);
 
-  final SupabaseClient _ = await SupabaseConnectionApi().initialize();
+  try {
+    await SharedPref.initializeSharedPreference();
+  } catch (exception, stackTrace) {
+    Log.error(exception.toString(), stackTrace: stackTrace);
+    throw ErrorDescription(exception.toString());
+  }
+
+  final SupabaseClient _ = await ApiConnectionService().initialize();
 
   runApp(const TimedTasks());
 }
@@ -24,13 +31,12 @@ class TimedTasks extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
       title: 'Timed Tasks',
-      initialRoute: Routes.initialRoute,
+      initialRoute: Routes.getInitialRoute(),
       routes: Routes.getRoutes(),
       theme: const CupertinoThemeData(
         primaryColor: Color(0xFF7FB77E),
         primaryContrastingColor: Color(0xFFFFC090),
         brightness: Brightness.light,
-        scaffoldBackgroundColor: Color(0xFFF7F6DC),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:timed_tasks/shared/widget/ContainerCard.dart';
+import 'package:timed_tasks/shared/widget/container_card.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({Key? key}) : super(key: key);

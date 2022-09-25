@@ -13,12 +13,13 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  supabase: ^0.3.6
+  supabase_flutter: ^0.3.3
   http: ^0.13.4
   shared_preferences: ^2.0.15
   logger: ^1.1.0
   connectivity: ^3.0.6
   dotenv: ^4.0.1
+  awesome_snackbar_content: ^0.0.8
 
 dev_dependencies:
   flutter_test:

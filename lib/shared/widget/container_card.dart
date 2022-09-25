@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ContainerCard extends StatelessWidget {
@@ -18,12 +19,10 @@ class ContainerCard extends StatelessWidget {
     return Container(
       width: width,
       height: height,
-      child: Padding(
-        padding: EdgeInsets.all(8),
+      child: Card(
         child: child,
       ),
       decoration: BoxDecoration(
-        color: CupertinoColors.white,
         borderRadius: BorderRadius.circular(8),
       ),
     );
