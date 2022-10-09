@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:timed_tasks/shared/extensions/string-extension.dart';
+import 'package:timed_tasks/shared/extension/string_extension.dart';
 import 'package:timed_tasks/shared/log/logger.dart';
 
 class SharedPref {
